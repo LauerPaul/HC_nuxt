@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     if_ = require('gulp-if'),
     plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
+    notify = require('gulp-notify'),
+    filesize = require('gulp-filesize'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     prefix = require('gulp-autoprefixer'),
@@ -44,33 +46,36 @@ gulp.task('_init_', ['default'], function () {
 /** SCSS */
 gulp.task('scss', ['scss_min'], function () {
     return gulp.src(cnf.path.app + cnf.path.css.in)
-                .pipe(plumber())
+                .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
                 .pipe(if_(cnf.prop.css.sourcemap, sourcemaps.init()))
                     .pipe(sass({
                         outputStyle: 'nested',
                         precison: 3,
                         errLogToConsole: true
                     }).on('error', sass.logError))
-                    .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
                 .pipe(if_(cnf.prop.css.sourcemap, sourcemaps.write(cnf.path.css.sourcemap)))
+                .pipe(plumber.stop())
                 .pipe(gulp.dest(cnf.path.dst + cnf.path.css.out))
+                // .pipe(filesize())
 });
 
 /** SCSS min */
 gulp.task('scss_min', function () {
     if(cnf.prop.css.min){
         return gulp.src(cnf.path.app + cnf.path.css.in)
-                    .pipe(plumber())
+                    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
                     .pipe(if_(cnf.prop.css.sourcemap, sourcemaps.init()))
                         .pipe(sass({
                             outputStyle: 'compressed',
                             precison: 3,
                             errLogToConsole: true
                         }).on('error', sass.logError))
-                        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+                        .pipe(prefix())
                         .pipe(rename('styles.min.css'))
                     .pipe(if_(cnf.prop.css.sourcemap, sourcemaps.write(cnf.path.css.sourcemap)))
+                    .pipe(plumber.stop())
                     .pipe(gulp.dest(cnf.path.dst + cnf.path.css.out))
+                    // .pipe(filesize())
     }
 });
 
@@ -81,11 +86,13 @@ gulp.task('scss_min', function () {
 /** Images */
 gulp.task('images', function () {
     gulp.src(cnf.path.app + cnf.path.images.in)
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(cache(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         })))
+        .pipe(plumber.stop())
         .pipe(gulp.dest(cnf.path.dst + cnf.path.images.out))
 });

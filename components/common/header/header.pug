@@ -1,0 +1,23 @@
+//- Header
+header
+	b-navbar
+		.hw.container.align-items-center
+			.l-case.d-flex.align-items-center
+				//- Site Logo
+				b-navbar-brand.d-flex.align-items-center(
+								:to="($route.path !== '/' ? { name: 'index' } : '')",
+								:tag="($route.path === '/' ? 'span' : 'a')"	
+							)
+					img(:src="logo", :alt="logo_alt")
+				
+				//- Searh input
+				search-line(v-if="search_status")
+
+//- .d-flex.justify-content-end.case-nav
+//- Header menu
+//- header-menu(v-if="headerMenu_status")
+
+
+//- Button menu
+//- b-button.toggle-menu(@click="asideToggle")
+//- i.mdi.mdi-menu

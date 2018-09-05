@@ -10,10 +10,8 @@
 import Vuex from 'vuex'
 
 import Site from '@/store/site'
-import Chat from '@/store/chat'
 /**
 * > [Store Site]{@link module:@/store/site}
-* > [Store Chat]{@link module:@/store/chat}
 */
 
 const createStore = () => {

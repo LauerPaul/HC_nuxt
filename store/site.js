@@ -17,8 +17,8 @@ const Site = {
     namespaced: true,
     state: {
         visits: [],
-        logo: require('~/assets/images/logo.png'),
-        logo_alt: 'site logo'
+        logo: require('~/static/logo.png'),
+        logo_alt: 'hearts-club.com'
     },
     mutations: {
         ADD_VISIT(state, path) {

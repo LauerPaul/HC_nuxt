@@ -1,0 +1,21 @@
+header {
+	background: $headerBG;
+	height: 64px;
+
+	.navbar, .hw {
+		height: 100%;
+	}
+
+	.navbar-brand {
+		width: 190px;
+		margin-right: 54px;
+		padding-right: 30px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+	
+	// Header search line
+	@import "header-search-line"
+}

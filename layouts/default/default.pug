@@ -1,15 +1,7 @@
 .app-wrapper
-	//- Header
-	header.header
-		b-navbar.justify-content-between(toggleable="md")
-			.d-flex.case
+	module-header
 
-				//- Site Logo
-				b-navbar-brand(
-								:to="($route.path !== '/' ? { name: 'index' } : '')",
-								:tag="($route.path === '/' ? 'span' : 'a')"
-							)
-					img(:src="logo", :alt="logo_alt")
-
+	//- ***********
 	//- App content
+	//- ***********
 	nuxt

@@ -1,0 +1,42 @@
+.header-search-wrapper {
+	width: 450px;
+	max-width: 450px;
+
+	.header-search {
+		width: calc(100% - 32px);
+		max-width: 410px;
+		height: 32px;
+		padding-left: 40px;
+		background: rgba(0, 0, 0, 0.12);
+		border-color: rgba(0, 0, 0, 0);
+		font-family: 'Proxima Nova Lt';
+		font-size: 14px;
+		line-height: normal;
+		font-style: normal;
+		color: rgba(255, 255, 255, 0.9);
+		@include border-radius(4px);
+		@include transition(all 0.4s);
+
+		@include input-placeholder(){
+			color: rgba(255, 255, 255, 0.7);
+			opacity: 1;
+		};
+	}
+
+	.control {
+		width: 32px;
+		height: 32px;
+		background: transparent;
+		outline: none;
+		box-shadow: none;
+		border: none;
+		padding: 8px;
+
+		&:focus, &:hover {
+			background: transparent;
+			outline: none;
+			box-shadow: none;
+			border: none;
+		}
+	}
+}

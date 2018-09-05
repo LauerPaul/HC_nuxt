@@ -9,7 +9,7 @@
 
 		"css": {
 			"in": "styles/_scss/*.scss",
-			"out": "styles/",
+			"out": "styles/css/",
 			"sourcemap": "maps/"
 		},
 		"images": {

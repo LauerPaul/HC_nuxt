@@ -16,14 +16,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt test',
+    title: 'Hearts club',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
   /*
@@ -53,7 +53,7 @@ module.exports = {
   css: [
     // node.js module but we specify the lang
     // { src: 'bulma', lang: 'sass' },
-    resolve(__dirname, 'assets/styles/styles.css'),
+    resolve(__dirname, 'assets/styles/css/styles.css'),
     'swiper/dist/css/swiper.css',
     'vue2-animate/dist/vue2-animate.min.css'
   ],
