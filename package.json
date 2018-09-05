@@ -28,10 +28,12 @@
     "npm": "^6.1.0",
     "nuxt": "^1.0.0",
     "perfect-scrollbar": "^1.4.0",
+    "svg-inline-loader": "^0.8.0",
     "vue-awesome-swiper": "^3.1.3",
     "vue-focus": "^2.1.0",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-slick": "^1.1.12",
+    "vue-svg-filler": "^1.0.6",
     "vue2-animate": "^2.0.0",
     "vuejs-logger": "^1.4.0",
     "vuex-shared-mutations": "0.0.4"
@@ -73,6 +75,7 @@
     "sherry-docstrap": "^1.3.2",
     "standard-version": "latest",
     "vue-lazyload": "^1.2.6",
+    "vue-svg-loader": "^0.8.0",
     "vue-wait": "^1.2.2",
     "vuex-persistedstate": "^2.5.4"
   }

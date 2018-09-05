@@ -14735,7 +14735,8 @@ header {
       outline: none;
       box-shadow: none;
       border: none;
-      padding: 8px; }
+      padding: 8px;
+      line-height: 0px; }
       header .header-search-wrapper .control:focus, header .header-search-wrapper .control:hover {
         background: transparent;
         outline: none;

@@ -10,12 +10,14 @@
 * @copyright 2018©hearts-club.com
 */
 
+import iconFilter from '@/components/icons/filters'
+
 const data = {
 	/**
 	* @typedef {Object} Data
 	* 	@property {string} placeholder - placeholder строки поиска
 	*/
-	placeholder: 'Поиск'
+	placeholder: 'Поиск',
 }
 
 const methods = {
@@ -38,8 +40,10 @@ export default {
 	},
 	/**
 	* This layout requires the components: 
+	*
 	*/
 	components: {
+		'icon-filters': iconFilter
 	},
 
 	// Methods

@@ -1,0 +1,13 @@
+<svg width="17" height="15" viewBox="0 0 17 15" fill="none">
+<g opacity="0.7">
+<line x1="2.75" y1="7" x2="2.75" y2="15" stroke="white" stroke-width="1.5"/>
+<line x1="2.75" x2="2.75" y2="3" stroke="white" stroke-width="1.5"/>
+<line x1="14.75" y1="7" x2="14.75" y2="15" stroke="white" stroke-width="1.5"/>
+<line x1="14.75" x2="14.75" y2="3" stroke="white" stroke-width="1.5"/>
+<line x1="8.75" y1="8" x2="8.75" stroke="white" stroke-width="1.5"/>
+<line x1="8.75" y1="15" x2="8.75" y2="12" stroke="white" stroke-width="1.5"/>
+<circle cx="2.5" cy="4.5" r="1.75" stroke="white" stroke-width="1.5"/>
+<circle cx="14.5" cy="4.5" r="1.75" stroke="white" stroke-width="1.5"/>
+<circle cx="8.5" cy="9.5" r="1.75" stroke="white" stroke-width="1.5"/>
+</g>
+</svg>

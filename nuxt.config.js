@@ -46,6 +46,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        
+        config.module.rules.push({
+          test: /\.svg$/,
+          loader: 'svg-inline-loader',
+          exclude: /node_modules/
+        })
+        
       }
     },
     vendor: []
