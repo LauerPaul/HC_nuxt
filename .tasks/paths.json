@@ -2,14 +2,14 @@
 	"app" : "./assets/",
 	"dist" : "./assets/",
 	"scss": {
-		"path": "styles/_scss/*.scss",
-		"out": "styles/css/",
+		"path": "./scss/*.scss",
+		"out": "/css/",
 		"sourceMap": "maps/",
-		"watch": "styles/_scss/**/*.scss"
+		"watch": "./scss/**/*.scss"
 	},
 	"img": {
-		"path": "images/tmp/**/*.*",
+		"path": ".tmp/**/*.*",
 		"out": "images/",
-		"watch": "images/tmp/**/*.*"
+		"watch": ".tmp/**/*.*"
 	}
 }

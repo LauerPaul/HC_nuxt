@@ -1,10 +1,9 @@
 import fs from  'fs'
-import gulp    from 'gulp'
+import gulp from 'gulp'
 import imagemin from 'gulp-imagemin'
 import pngquant from 'imagemin-pngquant'
 import notify from 'gulp-notify'
 import cache from 'gulp-cache'
-import del from 'del'
 
 const paths_ = JSON.parse(fs.readFileSync('./.tasks/paths.json'));
 

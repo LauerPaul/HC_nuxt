@@ -14,7 +14,7 @@ const paths_ = JSON.parse(fs.readFileSync('./.tasks/paths.json'));
 const cnf = JSON.parse(fs.readFileSync('./.tasks/config.json'));
 
 export function css_compile_min(){
-	return gulp.src(paths_.app + paths_.scss.path)
+	return gulp.src(paths_.scss.path)
                 .pipe(plumber())
                 .pipe(changed(paths_.dist + paths_.scss.out))
                 .pipe(sass({
@@ -33,7 +33,7 @@ export function css_compile_min(){
 }
 
 export function css_compile (){
-	gulp.src(paths_.app + paths_.scss.path)
+	gulp.src(paths_.scss.path)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(changed(paths_.dist + paths_.scss.out))
         .pipe(if_(cnf.scss.sourceMap, sourcemaps.init({loadMaps: true})))

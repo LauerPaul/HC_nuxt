@@ -13,7 +13,7 @@ const paths_ = JSON.parse(fs.readFileSync('./.tasks/paths.json'));
 export function watch(cb) {
     /* Scss */
     if(cnf.scss.watch) {
-        gulp.watch(paths_.app + paths_.scss.watch, { passthrough: true, deep: true })
+        gulp.watch(paths_.scss.watch, { passthrough: true, deep: true })
         .on('change', function(path, stats) {
             console.log(' ');
             console.log('-----------------------------------------------------------------------------------');
@@ -34,12 +34,7 @@ export function watch(cb) {
             log('green', '->>>>>>> ✅ Watch [images]: ' + path);
             console.log('-----------------------------------------------------------------------------------');
             notify("[IMAGES] - Watch start...");
-            images();
-            del([paths_.app + paths_.img.path + '*']).then(paths => {
-                console.log('-----------------------------------------------------------------------------------');
-                console.log('Deleted files and folders:\n', paths.join('\n'));
-                console.log('-----------------------------------------------------------------------------------');
-            });
+            images()
         }).on('unlink', function(path, stats) {log('green', path);});
     }
 
