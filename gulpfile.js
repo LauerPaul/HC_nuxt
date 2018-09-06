@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     fs = require('fs'),
+    useref = require('gulp-useref'),
     cnf = JSON.parse(fs.readFileSync('./config.json'));
 
 /**
@@ -39,9 +40,7 @@ gulp.task('_init_', ['default'], function () {
     console.log("task init success...");
 });
 
-/**
- * [Task scss]
-*/
+/** [Task scss] */
 
 /** SCSS */
 gulp.task('scss', ['scss_min'], function () {

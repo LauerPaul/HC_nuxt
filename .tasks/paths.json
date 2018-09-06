@@ -1,0 +1,15 @@
+{
+	"app" : "./assets/",
+	"dist" : "./assets/",
+	"scss": {
+		"path": "styles/_scss/*.scss",
+		"out": "styles/css/",
+		"sourceMap": "maps/",
+		"watch": "styles/_scss/**/*.scss"
+	},
+	"img": {
+		"path": "images/tmp/**/*.*",
+		"out": "images/",
+		"watch": "images/tmp/**/*.*"
+	}
+}

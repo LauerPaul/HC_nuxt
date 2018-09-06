@@ -37,6 +37,10 @@ const methods = {
 		this.line_4.y2 = 5
 		this.circle_2.cy = 7.5
 		this.line_3.y1 = 10
+
+		this.line_5.y1 = 1
+		this.circle_3.cy = 2.5
+		this.line_6.y2 = 5
 	},
 	reset (){
 		this.line_1.y1 = 7
@@ -46,6 +50,10 @@ const methods = {
 		this.line_4.y2 = 3
 		this.circle_2.cy = 4.5
 		this.line_3.y1 = 7
+
+		this.line_5.y1 = 8
+		this.circle_3.cy = 9.5
+		this.line_6.y2 = 12
 	}
 }
 

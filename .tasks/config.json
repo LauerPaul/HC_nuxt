@@ -1,0 +1,16 @@
+{
+	"scss": {
+		"min": true,
+		"watch": true,
+		"sourceMap": true
+	},
+	"pug": {
+		"watch": true
+	},
+	"img": {
+		"watch": true
+	},
+	"fonts": {
+		"watch": true
+	}
+}
