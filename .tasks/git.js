@@ -42,15 +42,4 @@ gulp.task('git_status', function(cb){
 	cb();
 });
 
-gulp.task('deploy', gulp.series('git_status', 'git_add', 'git_commit', 'git_status', 'git_push'));
-
-
-
-	// })
-	// // if(git.status(function (err, stdout) { if (err) throw err;	})){
-	// // 	gulp.src('./').pipe(git.add())
-	// // 	git.status(function (err, stdout) { if (err) throw err;	})
-	// // }
-	// 	// git.status(function (err, stdout) { if (err) throw err;	})
- //    	// .push('origin', 'master', function (err) { if (err) throw err; });
-	// cb();
+gulp.task('deploy', gulp.series('git_status', 'git_add', 'git_commit', 'git_push'));
