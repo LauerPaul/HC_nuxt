@@ -18,7 +18,7 @@ gulp.task('git_commit', function(cb){
     log('green', '->>>>>>> ✅ GIT [git commit]');
     console.log('-----------------------------------------------------------------------------------');
 
-	gulp.src('./').pipe(git.commit('initial commit'));
+	gulp.src('./').pipe(git.commit('gulp-git commit'));
 	cb();
 });
 
