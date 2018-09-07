@@ -17,7 +17,7 @@ gulpSSH = new GulpSSH({
 })
  
 gulp.task('status', function (cb){
-  gulpSSH.shell(['cd /home/sexmeet/www/nuxt.hearts-club.com/public_html', 'git status'], {filePath: 'shell.log'})
+  gulpSSH.shell(['cd /home/sexmeet/www/nuxt.hearts-club.com/public_html', 'git status', 'git pull'], {filePath: 'shell.log'})
   .pipe(gulp.dest('../.log'))
 
   cb();
