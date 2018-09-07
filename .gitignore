@@ -4,5 +4,5 @@ npm-debug.log
 dist
 
 .log/*
-aassets/css
-aassets/.tmp
+assets/css
+assets/.tmp
