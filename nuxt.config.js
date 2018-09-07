@@ -58,9 +58,7 @@ module.exports = {
     vendor: []
   },
   css: [
-    // node.js module but we specify the lang
-    // { src: 'bulma', lang: 'sass' },
-    resolve(__dirname, 'assets/styles/css/styles.css'),
+    resolve(__dirname, 'assets/css/styles.css'),
     'swiper/dist/css/swiper.css',
     'vue2-animate/dist/vue2-animate.min.css'
   ],
