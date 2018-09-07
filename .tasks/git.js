@@ -19,7 +19,7 @@ gulp.task('git_commit', function(cb){
     log('green', '->>>>>>> ✅ GIT [git commit]');
     console.log('-----------------------------------------------------------------------------------');
 
-	gulp.src('../').pipe(git.commit('gulp-git commit'));
+	gulp.src('../').pipe(git.commit('gulp-git commit ['+new Date().toLocaleString('ua-UA')+']'));
 	cb();
 });
 
