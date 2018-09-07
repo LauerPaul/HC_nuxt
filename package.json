@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nuxt",
     "gulp": "gulp --require babel-register --gulpfile .tasks",
-    "push": "gulp deploy --require babel-register --gulpfile .tasks",
+    "push": "gulp git_status --require babel-register --gulpfile .tasks && gulp git_add --require babel-register --gulpfile .tasks && gulp git_status --require babel-register --gulpfile .tasks && gulp git_commit --require babel-register --gulpfile .tasks && gulp git_push --require babel-register --gulpfile .tasks && gulp git_status --require babel-register --gulpfile .tasks",
     "build": "gulp build --require babel-register --gulpfile .tasks && nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

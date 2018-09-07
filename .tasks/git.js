@@ -38,8 +38,6 @@ gulp.task('git_status', function(cb){
     log('green', '->>>>>>> ✅ GIT [git status]');
     console.log('-----------------------------------------------------------------------------------');
 
-	git.status({args: '--porcelain'}, function (err, stdout) { if (err) throw err; });
+	git.status(function (err, stdout) { if (err) throw err; });
 	cb();
 });
-
-gulp.task('deploy', gulp.series('git_status', 'git_add', 'git_commit', 'git_push'));
