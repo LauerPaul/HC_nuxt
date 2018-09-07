@@ -43,7 +43,7 @@ export function css_compile (){
                 errLogToConsole: true
         }).on('error', sass.logError))
         .pipe(prefix())
-        .pipe(if_(cnf.scss.sourceMap, sourcemaps.write(paths_.scss.sourceMap)))
+        .pipe(if_(cnf.scss.sourceMap, sourcemaps.write(paths_.scss.sourceMap, {sourceMappingURLPrefix: '/css'})))
         .pipe(plumber.stop())
         .pipe(gulp.dest(paths_.dist + paths_.scss.out))
         .pipe(filesize())
