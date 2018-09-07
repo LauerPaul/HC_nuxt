@@ -1,6 +1,7 @@
-import gulp from 'gulp'
-import git from 'gulp-git'
-import log from 'gutil-color-log'
+const
+gulp = require('gulp'),
+git = require('gulp-git'),
+log = require('gutil-color-log')
 
 gulp.task('git_push', function(cb){
 	console.log(' ');
