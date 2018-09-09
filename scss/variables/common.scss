@@ -1,7 +1,15 @@
-// VARIABLES
-
 // Colors
 $white: hsl(0, 0%, 100%);		//#ffffff
 
-// Common
-$headerBG: hsl(342, 77%, 45%);	//#CC1A4F
+// *************** Common ***************
+
+// HEADER
+$headerBG: 						hsl(342, 77%, 45%);	//#CC1A4F
+
+// HEADER SEAERCH
+$headerSearchBG: 				rgba(0, 0, 0, 0.12);
+$headerSearchFontfamily: 		'Proxima Nova Lt';
+$headerSearchFontsize: 			14px;
+$headerSearchBorderColor: 		transparent;
+$headerSearchColor: 			rgba(255, 255, 255, 0.9);
+$headerSearchPlaceholderColor: 	rgba(255, 255, 255, 0.7);
