@@ -10,6 +10,8 @@
 import Vuex from 'vuex'
 
 import Site from '@/store/site'
+import LeftMenu from '@/store/left_menu'
+import UserData from '@/store/userData'
 /**
 * > [Store Site]{@link module:@/store/site}
 */
@@ -17,7 +19,9 @@ import Site from '@/store/site'
 const createStore = () => {
   return new Vuex.Store({
     modules: {
-        Site
+        Site,
+        LeftMenu,
+        UserData
     }
   })
 }

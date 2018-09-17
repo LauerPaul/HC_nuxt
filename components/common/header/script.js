@@ -33,11 +33,11 @@ export default {
 	/**
 	* @desc ▶ Hook reporting
 	* <strong style="color:red; font-size: 18px;">ⓘ</strong> 
-	* @event module:components/common/header~Compomemt <strong>Default</strong> mounted
+	* @event module:components/common/header~Compomemt <strong>Header</strong> mounted
 	*/
 	mounted: function(){
 		// Log mounted hook
-		this.$log.info('layout \'default\' (@/components/common/header) -> mounted hook init');
+		this.$log.info('component \'header\' (@/components/common/header) -> mounted hook init');
 
 	},
 	/**

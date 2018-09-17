@@ -1,0 +1,35 @@
+.btn-icon-circle {
+	width: 36px;
+	height: 36px;
+	border: $btn_infoCircle_border;
+	color: $btn_infoCircle_color;
+	background: $btn_infoCircle_bg;
+	@include border-radius(50%);
+    font-size: 16px;
+    padding: 0;
+    text-align: center;
+    line-height: 32px;
+    margin: 0px 5px;
+    display: inline-block;
+    cursor: pointer;
+
+    .hc.hc-doc-edit {
+        font-size: 20px;
+        position: relative;
+        top: 4px;
+        left: 2px;
+    }
+
+    .hc.hc-pluse {
+        font-size: 14px;
+    }
+}
+
+.btn-link {
+    border: none;
+
+    .hc {
+        margin-right: 8px;
+        display: inline-block;
+    }
+}

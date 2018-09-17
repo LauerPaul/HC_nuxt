@@ -1,0 +1,21 @@
+.board {
+	background: $board_bg;
+	@include border-radius(4px);
+	border: 1px solid $board_border_color;
+	box-shadow: $board_box_shadow;
+	padding: 15px 20px 24px 20px;
+
+	.row-board {
+		@extend .d-flex;
+	}
+
+	.key {
+		color: $board_key_color;
+	}
+	
+	.value {
+		color: $board_value_color;
+	}
+}
+
+@import 'user_profile/user_profile.scss';

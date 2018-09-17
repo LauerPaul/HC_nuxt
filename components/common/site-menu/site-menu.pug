@@ -1,0 +1,7 @@
+.list-menu-wrapper
+	.menu-item(v-for="(item, index) in listMenu", :key="item.key", v-if="!item.devider", :class="item.special_class") 
+		a(href="#")
+			i.label(:class="item.icon")
+			span.name {{ item.name }}
+			span.notify(v-if="item.notify") {{ notify[item.key] }}
+	.menu-devider(v-else)

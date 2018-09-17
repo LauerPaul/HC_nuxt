@@ -2,14 +2,76 @@
 $white: hsl(0, 0%, 100%);		//#ffffff
 
 // *************** Common ***************
+// ************************************************
+// THEME
+// ************************************************
+$primary-color: 				hsl(335, 100%, 50%);	//#ff006a
+$light_gray_color:				rgba(0, 0, 0, 0.12);
+$gray_color:					#AAAAAA;
+$success_green_color:			#4dca00;
 
+// ************************************************
+// FONTS
+// ************************************************
+$font_primary: 					'Comfortaa-Regular';
+$font_secondary:				'Proxima Nova Rg';
+
+// ************************************************
+// BODY
+// ************************************************
+$font_family_default: 			$font_secondary;
+$text-color: 					#444444;
+$body_bg_default:				#E5E5E5;
+$body_bg_default_font_size:		0.875rem;
+$body_bg_default_font_size_sm:	0.8125rem;
+$body_bg_default_line_height:	1.25;
+
+
+// ************************************************
+// BUTTONS
+// ************************************************
+$btn_infoCircle_border: 		1px solid #D9D9D9;		
+$btn_infoCircle_color: 			$gray_color;	
+$btn_infoCircle_bg:				transparent;
+
+
+// ************************************************
 // HEADER
-$headerBG: 						hsl(342, 77%, 45%);	//#CC1A4F
+// ************************************************
+$headerBG: 						$primary-color;	
 
+// ************************************************
 // HEADER SEAERCH
-$headerSearchBG: 				rgba(0, 0, 0, 0.12);
-$headerSearchFontfamily: 		'Proxima Nova Lt';
+// ************************************************
+$headerSearchBG: 				$light_gray_color;
+$headerSearchFontfamily: 		$font_secondary;
 $headerSearchFontsize: 			14px;
 $headerSearchBorderColor: 		transparent;
 $headerSearchColor: 			rgba(255, 255, 255, 0.9);
 $headerSearchPlaceholderColor: 	rgba(255, 255, 255, 0.7);
+
+// ************************************************
+// SITE MENU
+// ************************************************
+$site_menu_devider_color: 		#dadada;
+$site_menu_font_family: 		$font_secondary;
+$site_menu_item_color: 			$text-color;
+$site_menu_icon_color: 			$gray_color;
+$site_menu_notify_bg: 			$primary-color;
+$site_menu_notify_color: 		$white;
+
+// ************************************************
+// BOARDS
+// ************************************************
+$board_bg: 						$white;
+$board_border_color: 			$light_gray_color;
+$board_box_shadow: 				0px 4px 24px rgba(0, 0, 0, 0.08);
+$board_key_color: 				#888888;
+$board_value_color: 			$text-color;
+
+// ************************************************
+// USER PROFILE BOARD
+// ************************************************
+$board_userProfile_name_color:					$text-color;
+$board_userProfile_device_color:				$success_green_color;
+$board_userProfile_first_info_fontFamily:		$font_secondary;

@@ -1,1 +1,6 @@
-.content-wrapper test
+.content-wrapper
+	.container
+		.row
+			.col-12
+				left-column(v-if="config.left_column_status", :config="left_column_config")
+				right-column(v-if="config.right_column_status")

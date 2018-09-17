@@ -8,7 +8,26 @@
 *   @copyright 2018©hearts-club.com
 */
 
-const data = {}
+// Configs
+import user_p_cnfg from '@/static/configs/pages/user_page.json'
+import lcol_cnfg from '@/static/configs/left_column.json'
+// Configs end
+
+import leftColumn from '@/components/columns/left_column'
+import rightColumn from '@/components/columns/right_column'
+
+const data = {
+	/**
+	* @typedef {Object} Data
+	* 	@property {object} config - параметры страницы
+	* 		@property {object} config.left_column_status - статус видимости левой колонки
+	* 		@property {object} config.right_column_status - статус видимости левой колонки
+	* 	@property {object} left_column_config - параметры левой колонки
+	* 		@property {boolean} left_column_config.menu_status - статус видимости списка меню
+	*/
+	left_column_config: lcol_cnfg,
+	config: user_p_cnfg,
+}
 
 /** Export component */
 export default {
@@ -32,8 +51,12 @@ export default {
 	/**
 	* This page requires the components:<br>
 	*
+	*	> [Left column]{@link module:components/columns/left_column}
+	*	> [Right column]{@link module:components/columns/right_column}
 	*/
 	components: {
+		'left-column': leftColumn,
+		'right-column': rightColumn
 	},
 
 	// Created

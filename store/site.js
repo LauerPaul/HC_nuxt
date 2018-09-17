@@ -1,6 +1,6 @@
 /**
 *   @version 1.0 beta
-*   @module @/store/site
+*   @module store/site
 *   @desc <strong>Store Site</strong> - хранилище данных приложения
 *   @see ~/store/site
 *

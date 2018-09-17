@@ -11,7 +11,6 @@
 */
 
 import iconFilter from '@/components/icons/filters'
-import iconSearch from '@/components/icons/search'
 
 const data = {
 	/**
@@ -45,7 +44,6 @@ export default {
 	*/
 	components: {
 		'icon-filters': iconFilter,
-		'icon-search': iconSearch,
 	},
 
 	// Methods
