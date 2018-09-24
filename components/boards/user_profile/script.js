@@ -15,7 +15,9 @@ import { mapState } from 'vuex'
 const data = {
 	/**
 	* @typedef {Object} Data
+	*	@property {bolean} show_diamon_popup - статус отображения всплывающего окна (инфо о статусе премиум)
 	*/
+	show_diamon_popup: false
 }
 
 const methods = {
@@ -37,6 +39,7 @@ export default {
 	*	@property {object} city - город пользователя (из Store [UserData]{@link module:store/userData})
 	*	@property {array} lookingFor - массив, кого ищет пользователь (из Store [UserData]{@link module:store/userData})
 	*	@property {array} purposes -массив целей знакомства на сайте (из Store [UserData]{@link module:store/userData})
+    *   @property {boolean} isPremium - находится ли профиль в статусе "premium" (из Store [UserData]{@link module:store/userData})
 	*/
 	computed: mapState('UserData', [
     	'avatar',
@@ -47,7 +50,8 @@ export default {
     	'country',
     	'city',
     	'lookingFor',
-    	'purposes'
+    	'purposes',
+    	'isPremium'
 	]),
 
 	/**
@@ -58,7 +62,6 @@ export default {
 	mounted: function(){
 		// Log mounted hook
 		this.$log.info('component \'Board User profile\' (@/components/boards/user_profile) -> mounted hook init');
-
 	},
 	/**
 	* Компонент использует компоненты:

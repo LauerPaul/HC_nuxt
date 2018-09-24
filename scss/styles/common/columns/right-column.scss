@@ -3,6 +3,28 @@
 	margin-left: 25px;
 	float: right;
 	min-height: 1px;
-	padding-top: 24px;
-	padding-bottom: 40px;
+	padding-top: 16px;
+	padding-bottom: 32px;
+
+	.col_wrapper {
+		margin: 0px -8px;
+		
+		.col_full{
+			padding: 0px 8px;
+			float: none;
+			width: 100%;
+		}
+
+		.col_left {
+			width: 492px;
+			padding: 0px 8px;
+			float: left;
+		}
+
+		.col_right {
+			width: calc(100% - 492px);
+			padding: 0px 8px;
+			float: right;
+		}
+	}
 }

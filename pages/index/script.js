@@ -14,7 +14,7 @@ import lcol_cnfg from '@/static/configs/left_column.json'
 // Configs end
 
 import leftColumn from '@/components/columns/left_column'
-import rightColumn from '@/components/columns/right_column'
+import rightColumn from '@/components/columns/right_column/profile'
 
 const data = {
 	/**
@@ -52,7 +52,7 @@ export default {
 	* This page requires the components:<br>
 	*
 	*	> [Left column]{@link module:components/columns/left_column}
-	*	> [Right column]{@link module:components/columns/right_column}
+	*	> [Right column]{@link module:components/columns/right_column/profile}
 	*/
 	components: {
 		'left-column': leftColumn,

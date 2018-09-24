@@ -11,6 +11,39 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 
+		.premium-icon {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		    display: block;
+			background: $board_userProfile_premiumIco_bg;
+			border: $board_userProfile_premiumIco_border;
+			box-shadow: $board_userProfile_premiumIco_shadow;
+			@include border-radius(50%);
+			text-align: center;
+			@include transition(all 0.24s);
+			cursor: pointer;
+
+			.hc {
+				font-size: 23px;
+				line-height: 40px;
+				color: $board_userProfile_premiumIco_color;
+				@include transition(all 0.24s);
+			}
+
+			&:hover, &.active {
+				background: $board_userProfile_premiumIco_Active_bg;
+				border: $board_userProfile_premiumIco_Active_border;
+				color: $board_userProfile_premiumIco_Active_color;
+
+				.hc {
+					color: $board_userProfile_premiumIco_Active_color;
+				}
+			}
+		}
+
 		.avatar-wrapper {
 			background: $board_border_color;
 			@include border-radius(50%);
@@ -31,10 +64,9 @@
 		.user-name {
 			width: calc(100% - 132px);
 			padding-top: 29px;
-			font-family: 'Comfortaa-Bold';
 			font-style: normal;
-			font-weight: bold;
-			line-height: 32px;
+			font-weight: normal;
+			line-height: 35px;
 			font-size: 24px;
 			color: $board_userProfile_name_color;
 
@@ -55,10 +87,12 @@
 
 		.user-first-info {
 			line-height: 20px;
-			font-size: 14px;
-			padding-top: 2px;
+			font-size: 13px;
+			// padding-top: 2px;
 			padding-bottom: 18px;
-			
+		    opacity: 0.64;
+			cursor: default;
+
 			span {
 				display: inline-block;
 				position: relative;
@@ -80,18 +114,19 @@
 		}
 
 		.key {
-			width: 87px;
-			padding-right: 8px;
+		    width: auto;
+			padding-right: 15px;
+			cursor: default;
 		}
 		.value {
 			width: calc(100% - 87px);
+			cursor: default;
 		}
 
 		.user-preference {
 			margin-bottom: 8px;
 
 			.value {
-				font-weight: bold;
 
 				span {
 					position: relative;
@@ -107,20 +142,31 @@
 			}
 		}
 
-		.user-purposes {
-			margin-bottom: 8px;
+ 		.user-purposes {
+			margin-bottom: 4px;
 			
-			.value {
-				span {
-					position: relative;
+			.tabs-list {
+				margin: 0px -4px;
 
-					&:not(:last-child){
-						&::after {
-							content: ',';
-							margin-right: 4px;
-							display: inline-block;
-						}
-					}
+				.item-tab {
+					position: relative;
+					display: inline-block;
+					background: $board_userProfile_purposesTab_bg;
+					@include border-radius(8px);
+					line-height: 18px;
+					font-size: 12px;
+					color: $board_userProfile_purposesTab_color;
+					padding: 0px 8px;
+					cursor: pointer;
+					margin: 4px;
+				    word-break: break-all;
+				    @include transition(all 0.24s);
+				    border: none;
+
+				    &:hover {
+				    	background: $board_userProfile_purposesTab_hover_bg;
+				    	color: $board_userProfile_purposesTab_hover_color;
+				    }
 				}
 			}
 		}
@@ -135,7 +181,7 @@
 				padding-top: 21px;
 				padding-left: 0px;
 				padding-right: 0px;
-				@include transition(all 0.4s);
+				@include transition(all 0.24s);
 
 				&:hover {
 					color: $primary-color;
@@ -153,6 +199,23 @@
 					top: 6px;
 					@include transition(all 0.4s);
 				}
+			}
+		}
+	}
+}
+
+.diamond-tooltip {
+	font-size: 12px;
+
+	.bottom-popover-line {
+		margin-top: 8px;
+
+		a {
+			color: $primary-color;
+			cursor: pointer;
+
+			&:hover {
+				color: $primary-color;
 			}
 		}
 	}

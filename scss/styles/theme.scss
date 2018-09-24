@@ -1,3 +1,9 @@
+body {
+    letter-spacing: -0.03em;
+
+    *, a:focus, button:focus { outline: none !important; }
+}
+
 .btn-icon-circle {
 	width: 36px;
 	height: 36px;
@@ -12,6 +18,7 @@
     margin: 0px 5px;
     display: inline-block;
     cursor: pointer;
+    @include transition(all 0.4s);
 
     .hc.hc-doc-edit {
         font-size: 20px;
@@ -22,6 +29,17 @@
 
     .hc.hc-pluse {
         font-size: 14px;
+    }
+
+    i.hc.hc-option-dots {
+        position: relative;
+        top: 1px;
+    }
+
+    &:hover {
+        color: $btn_infoCircle_hover_color;
+        border-color: $btn_infoCircle_hover_borderColor;
+        background: $btn_infoCircle_hover_bg;
     }
 }
 

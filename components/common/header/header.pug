@@ -13,11 +13,27 @@ header
 				//- Searh input
 				search-line(v-if="search_status")
 
-//- .d-flex.justify-content-end.case-nav
-//- Header menu
-//- header-menu(v-if="headerMenu_status")
+			.r-case.d-flex.align-items-center.justify-content-end
+				.wrap
+					b-dropdown(right, variant="link", no-caret)
+						template(slot="button-content") Мой рейтинг
+							i.hc.hc-arrow-down
 
+						b-dropdown-item First Action
+						b-dropdown-item First Action
 
-//- Button menu
-//- b-button.toggle-menu(@click="asideToggle")
-//- i.mdi.mdi-menu
+					.rating
+						i.hc.hc-star
+						span.rating-status 58/100
+
+				.wrap
+					b-dropdown(right, variant="link", no-caret)
+						template(slot="button-content") Баланс
+							i.hc.hc-arrow-down
+
+						b-dropdown-item First Action
+						b-dropdown-item First Action
+
+					.rating
+						i.hc.hc-point
+						span.rating-status 356

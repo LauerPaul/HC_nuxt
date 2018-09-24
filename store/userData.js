@@ -19,6 +19,7 @@ const userData = {
     *   @property {string} city - город пользователя
     *   @property {array} lookingFor - массив, кого пользователь ищет
     *   @property {array} purposes - массив целей знакомства на сайте
+    *   @property {boolean} isPremium - находится ли профиль в статусе "premium"
     */
     namespaced: true,
     state: {
@@ -39,7 +40,8 @@ const userData = {
             'Секс без обязательств с постоянным партнером',
             ' Обмен интим-фото',
             'Интим-переписка'
-        ]
+        ],
+        isPremium: true
 
     },
     mutations: {

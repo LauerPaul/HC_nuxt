@@ -187,7 +187,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 1150px,
-  xl: 1160px
+  xl: 10160px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -202,7 +202,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 1110px,
-  xl: 1110px
+  xl: 10110px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -751,7 +751,7 @@ $tooltip-arrow-color:               $tooltip-bg !default;
 
 $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
-$popover-max-width:                 276px !default;
+$popover-max-width:                 232px;
 $popover-border-width:              $border-width !default;
 $popover-border-color:              rgba($black, .2) !default;
 $popover-border-radius:             $border-radius-lg !default;
@@ -759,8 +759,8 @@ $popover-box-shadow:                0 .25rem .5rem rgba($black, .2) !default;
 
 $popover-header-bg:                 darken($popover-bg, 3%) !default;
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          .5rem !default;
-$popover-header-padding-x:          .75rem !default;
+$popover-header-padding-y:          13px;
+$popover-header-padding-x:          16px;
 
 $popover-body-color:                $body-color !default;
 $popover-body-padding-y:            $popover-header-padding-y !default;

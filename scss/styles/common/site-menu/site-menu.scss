@@ -11,6 +11,23 @@
 		width: 100%;
 		position: relative;
 		font-family: $site_menu_font_family;
+		@include transition(all 0.2s);
+		@include border-radius(4px);
+		background: $site_menu_bg;
+
+		&:hover{
+			background: $site_menu_bg_hover;
+			
+			a, span {
+				.label {
+					color: $site_menu_icon_color_hover;
+					
+					&::before {
+						color: $site_menu_icon_color_hover;
+					}
+				}
+			}
+		}
 
 		.label {
 			color: $site_menu_icon_color;
@@ -20,7 +37,8 @@
 			line-height: 0;
 			position: relative;
 			top: 4px;
-
+			@include transition(all 0.4s);
+		
 			&::before {
 				color: $site_menu_icon_color;
 			}
