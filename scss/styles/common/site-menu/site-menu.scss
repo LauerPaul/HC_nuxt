@@ -5,8 +5,8 @@
 	.menu-item {
 		padding: 8px 0 8px 18px;
 		cursor: pointer;
-		line-height: 22px;
-		font-size: 14px;
+		line-height: $site_menu_item_line_height;
+		font-size: $site_menu_item_font_size;
 		display: block;
 		width: 100%;
 		position: relative;
@@ -15,7 +15,7 @@
 		@include border-radius(4px);
 		background: $site_menu_bg;
 
-		&:hover{
+		&:hover {
 			background: $site_menu_bg_hover;
 			
 			a, span {
@@ -29,15 +29,32 @@
 			}
 		}
 
+		&.active {
+			a, span {
+				a, .name {
+					color: $site_menu_item_color_active;
+				}
+
+				.label {
+					color: $site_menu_item_color_active;
+					
+					&::before {
+						color: $site_menu_icon_color_active;
+					}
+				}
+			}
+		}
+
 		.label {
 			color: $site_menu_icon_color;
-			font-size: 24px;
+			font-size: $site_menu_icon_font_size;
 			padding-right: 18px;
 			display: inline-block;
-			line-height: 0;
+			line-height: $site_menu_icon_line_height;
 			position: relative;
 			top: 4px;
 			@include transition(all 0.4s);
+	    	font-weight: 500;
 		
 			&::before {
 				color: $site_menu_icon_color;
@@ -47,6 +64,7 @@
 		a, .name {
 			text-decoration: none;
 			color: $site_menu_item_color;
+	    	font-weight: 500;
 
 			&:hover {
 				text-decoration: none !important;
@@ -60,10 +78,10 @@
 			padding: 0px 5px 0px;
 			@include border-radius(30px);
 			font-family: $headerSearchFontfamily;
-			font-size: 11px;
+			font-size: $site_menu_notify_font_size;
 			font-weight: bold;
-			line-height: 14px;
-			letter-spacing: 0.25px;
+			line-height: $site_menu_notify_line_height;
+			letter-spacing: $site_menu_notify_letter_spacing;
 			right: 6px;
 			height: 14px;
 			top: -50%;
@@ -74,8 +92,8 @@
 				content: '+';
 				position: relative;
 				padding-right: 2px;
-				font-size: 13px;
-				line-height: 0;
+				font-size: $site_menu_notify_before_font_size;
+				line-height: $site_menu_notify_before_line_height;
 				position: relative;
 				top: 1px;
 			}
