@@ -4,7 +4,7 @@
 		span.premium-icon(v-if="isPremium",
 							id="diamond",
 							@click="show_diamon_popup=!show_diamon_popup")
-			i.hc.hc-dimond
+			i.hc.hc-diamond
 				
 		b-popover(target="diamond",
                   placement="bottomright",
@@ -28,7 +28,7 @@
 				button.btn-icon-circle(type="button",
 										v-b-tooltip.hover,
 										title="Редактировать профиль")
-					i.hc.hc-doc-edit
+					i.hc.hc-notes
 				button.btn-icon-circle(type="button", v-b-tooltip.hover, title="Меню")
 					i.hc.hc-option-dots
 		.row-board.user-first-info 
@@ -50,8 +50,8 @@
 				i.hc.hc-chat-edit
 				span Cообщение
 			button(type="button").btn-link
-				i.hc.hc-divan
+				i.hc.hc-exchange
 				span Обмен фото
 			button(type="button").btn-link
-				i.hc.hc-crossed-out-heart
+				i.hc.hc-two-hearts
 				span Проявить симпатию
